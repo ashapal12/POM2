@@ -19,7 +19,7 @@ public class TestLoginWithPageFactory {
 	
 	@BeforeClass
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/001AK9744/Documents/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/Software/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
@@ -34,7 +34,6 @@ public class TestLoginWithPageFactory {
 		Assert.assertEquals(driver.getTitle(),"OrangeHRM");
 		objLogin.loginToApplication("Admin", "admin123");
 		//go to next page
-		objHomePage = new HomePage(driver);
 		//verify the home page
 				String loginPageMessage = objLogin.verifyDashboardPage();
 				Assert.assertTrue(loginPageMessage.contains("Dashboard"));

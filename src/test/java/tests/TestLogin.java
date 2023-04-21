@@ -20,7 +20,7 @@ public class TestLogin {
 	
 	@BeforeClass
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/001AK9744/Documents/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:/Software/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
